@@ -6,7 +6,7 @@ const rpt = document.querySelector("#report");
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
   rpt.textContent = "";
-  locationRpt.textContent = "...loading";
+  locationRpt.textContent = "Loading...";
   const location = search.value;
   fetch(`http://localhost:3000/weather?address=${location}`).then(
     (response) => {
