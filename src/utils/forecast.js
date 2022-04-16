@@ -16,8 +16,9 @@ const forecast = (lat, log, callback) => {
     } else {
       const temp = body.current.temperature;
       const flTemp = body.current.feelslike;
+      const hum = body.current.humidity;
       callback(undefined, {
-        temperature: `It is currently ${temp} degress out, but weather feel like ${flTemp}`,
+        temperature: `It is currently ${temp} degress out, but the weather feel like ${flTemp} and humidity is ${hum}`,
       });
     }
   });
